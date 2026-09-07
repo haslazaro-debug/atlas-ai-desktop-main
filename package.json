@@ -22,7 +22,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "electron:build": "electron-builder"
+    "electron:build": "electron-builder --publish never"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
