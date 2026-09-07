@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+python-telegram-bot
+google-genai
+faster-whisper
+pyautogui
+pillow
+python-dotenv
+python-multipart
+httpx
+edge-tts
+apscheduler
+feedparser
+beautifulsoup4
+requests
+stripe

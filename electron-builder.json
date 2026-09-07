@@ -1,0 +1,19 @@
+{
+  "appId": "com.atlas.app",
+  "productName": "AtlasAI",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    ".output/**/*",
+    "public/**/*",
+    "electron.js",
+    "node_modules/**/*"
+  ],
+  "mac": {
+    "icon": "public/icon.icns"
+  },
+  "win": {
+    "icon": "public/icon.ico"
+  }
+}

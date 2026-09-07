@@ -1,0 +1,35 @@
+{
+  "schedule_time": "09:00",
+  "is_enabled": true,
+  "timezone": "Asia/Almaty",
+  "chat_id": 1135413860,
+  "focus_topic": "YouTube монетизация, AI-инструменты, инди-софт, создание контента",
+  "sources": [
+    {
+      "name": "Reddit YouTube",
+      "url": "https://www.reddit.com/r/YouTube/hot/.rss",
+      "type": "rss"
+    },
+    {
+      "name": "Reddit SaaS",
+      "url": "https://www.reddit.com/r/SaaS/hot/.rss",
+      "type": "rss"
+    },
+    {
+      "name": "Reddit Artificial Intelligence",
+      "url": "https://www.reddit.com/r/artificial/hot/.rss",
+      "type": "rss"
+    },
+    {
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "type": "rss"
+    },
+    {
+      "name": "Hacker News Top",
+      "url": "https://news.ycombinator.com/rss",
+      "type": "rss"
+    }
+  ],
+  "language": "English"
+}
