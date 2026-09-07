@@ -12,10 +12,8 @@
       "output": "dist"
     },
     "files": [
-      "electron.js",
-      ".output/**/*",
-      "public/**/*",
-      "node_modules/**/*"
+      "electron.cjs",
+      "dist/**/*"
     ]
   },
   "scripts": {
