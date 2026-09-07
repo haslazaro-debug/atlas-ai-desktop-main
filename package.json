@@ -4,7 +4,7 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
-  "main": "electron.js",
+  "main": "electron.cjs",
   "build": {
     "appId": "com.atlas.ai",
     "productName": "AtlasAI",
