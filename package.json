@@ -3,6 +3,18 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "main": "dist-electron/main.js",
+  "build": {
+    "appId": "com.atlas.ai",
+    "productName": "AtlasAI",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist-electron/**/*",
+      "dist/**/*"
+    ]
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -10,7 +22,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "electron:build": "electron-builder build -mwl --config='{\"appId\": \"com.atlas.app\", \"productName\": \"AtlasAI\", \"directories\": {\"output\": \"dist\"}, \"files\": [\".output/**/*\", \"public/**/*\", \"electron.js\", \"node_modules/**/*\"]}'"
+    "electron:build": "electron-builder"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -75,8 +87,6 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.2.0",
-    "electron": "^44.2.0",
-    "electron-builder": "^26.15.3",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.6",
@@ -87,11 +97,6 @@
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
-    "vite": "^8.2.0",
-    "wait-on": "^9.1.0"
-  },
-  "version": "1.0.0",
-  "author": "Atlas",
-  "description": "Atlas AI Desktop App",
-  "main": "electron.js"
+    "vite": "^8.2.0"
+  }
 }
