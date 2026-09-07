@@ -4,7 +4,7 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
-  "main": "dist-electron/main.js",
+  "main": "electron.js",
   "build": {
     "appId": "com.atlas.ai",
     "productName": "AtlasAI",
@@ -12,8 +12,10 @@
       "output": "dist"
     },
     "files": [
-      "dist-electron/**/*",
-      "dist/**/*"
+      "electron.js",
+      ".output/**/*",
+      "public/**/*",
+      "node_modules/**/*"
     ]
   },
   "scripts": {
@@ -100,6 +102,7 @@
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
-    "vite": "^8.2.0"
+    "vite": "^8.2.0",
+    "wait-on": "^9.1.0"
   }
 }
