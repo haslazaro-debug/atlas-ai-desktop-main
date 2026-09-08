@@ -3,18 +3,30 @@ const path = require('path');
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 480,
-    height: 700,
-    frame: false,          // Убирает стандартную рамку окна с кнопками свернуть/закрыть
-    transparent: true,     // Включает прозрачность для эффекта стекла
-    backgroundColor: '#00000000', // Полностью прозрачный фон
+    width: 1200, // Сделали нормальную ширину под ПК
+    height: 800,  // И нормальную высоту
+    frame: false,         
+    transparent: true,     
+    backgroundColor: '#00000000', 
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true
     }
   });
 
-  mainWindow.loadFile(path.join(__dirname, 'dist/index.html'));
+  // Проверяем: если мы запускаем локально в разработке, можно грузить с локалхоста, 
+  // а при продакшене — скомпилированный index.html
+  const isDev = process.env.NODE_ENV === 'development' || !app.isPackaged;
+
+  if (isDev) {
+    // Если проект запущен локально, открываем Vite-сервер (порт может отличаться, обычно 3000 или 5173)
+    mainWindow.loadURL('http://localhost:3000').catch(() => {
+      // Если сервер не запущен, грузим файл из дистрибутива
+      mainWindow.loadFile(path.join(__dirname, 'dist/index.html'));
+    });
+  } else {
+    mainWindow.loadFile(path.join(__dirname, 'dist/index.html'));
+  }
 }
 
 app.whenReady().then(() => {
