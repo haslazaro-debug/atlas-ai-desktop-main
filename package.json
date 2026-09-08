@@ -11,9 +11,19 @@
     "directories": {
       "output": "dist"
     },
+    "win": {
+      "icon": "icon.png"
+    },
+    "mac": {
+      "icon": "icon.png"
+    },
+    "linux": {
+      "icon": "icon.png"
+    },
     "files": [
       "electron.cjs",
-      "dist/**/*"
+      "dist/**/*",
+      "icon.png"
     ]
   },
   "scripts": {
